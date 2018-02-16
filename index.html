@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>inputTAG</title>
+  <link rel="stylesheet" href="inputtag.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <style>
+  #inputtag--stylezed {
+    border: 1px solid #ccc;
+    padding: 10px 5px;
+  }
+  </style>
+</head>
+<body>
+
+  <input type="text" name="whatever" id="inputtag" data-items="valor" value="Teste"/>
+  <input type="text" name="whatever" id="inputtag--stylezed" value="teste,higo"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="inputtag.js"></script>
+  <script>
+    (function($) {
+      $('#inputtag').inputTag();
+      $('#inputtag--stylezed').inputTag({repeat: false, max: 3});
+    })(jQuery);
+  </script>
+</body>
+</html>
